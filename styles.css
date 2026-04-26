@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: #eeeeee;
+  color: #333333;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  align-items: center;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100dvh;
+  width: 100%;
+}
+
+.hero {
+  background: #eeeeee;
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+
+.hero-bg {
+  display: block;
+  flex: none;
+  height: auto;
+  width: 100%;
+}
+
+.dog-stage {
+  background: transparent;
+  display: block;
+  flex: none;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.dog-stage-absolute {
+  inset: 0;
+}
+
+.dog-card {
+  --x-offset: 0px;
+  --y-offset: 0px;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: block;
+  flex: none;
+  height: auto;
+  padding: 0;
+  position: absolute;
+  transform: translate(var(--x-offset), var(--y-offset));
+  transition: transform 0.3s cubic-bezier(0.4, 0.4, 0, 1);
+  width: 16.328125%;
+  z-index: 1;
+}
+
+.dog-card:hover {
+  --y-offset: -4.5%;
+}
+
+.dog-card:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+.dog {
+  display: block;
+  flex: none;
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+
+.speech {
+  height: auto;
+  left: -33.971292%;
+  opacity: 0;
+  position: absolute;
+  top: 6.30063%;
+  transition: opacity 0.3s cubic-bezier(0.4, 0.4, 0, 1);
+  width: 84.688995%;
+  z-index: 1;
+}
+
+.dog-card:hover .speech,
+.dog-card:focus .speech,
+.dog-card:focus-visible .speech {
+  opacity: 1;
+}
+
+.hero-one .dog-a {
+  bottom: 0;
+  left: 40%;
+  right: auto;
+  top: auto;
+}
+
+.hero-one .dog-b {
+  bottom: 0;
+  left: 56.875%;
+  right: auto;
+  top: auto;
+}
+
+.hero-one .dog-c {
+  bottom: 0;
+  left: 72.8125%;
+  right: auto;
+  top: auto;
+}
+
+.hero-one .dog-d {
+  bottom: 29.444444%;
+  left: 83.671875%;
+  right: auto;
+  top: auto;
+}
+
+.spacer {
+  background: #eeeeee;
+  height: 1134px;
+  width: 100%;
+}
+
+.footer {
+  align-content: center;
+  align-items: center;
+  background: #fafafa;
+  bottom: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  left: 0;
+  opacity: 0.7;
+  padding: 16px 0 40px;
+  position: fixed;
+  right: 0;
+  top: auto;
+  width: 100%;
+  z-index: 3;
+}
+
+.footer-inner {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  height: auto;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+}
+
+.copyright {
+  align-content: flex-end;
+  align-items: flex-end;
+  color: #1c1c1c;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  gap: 10px;
+  height: auto;
+  justify-content: flex-start;
+  letter-spacing: 0;
+  line-height: 1;
+  padding: 0 0 0 40px;
+  text-align: left;
+  width: auto;
+}
+
+.footer-right {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 24px;
+  height: auto;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 0 40px 0 0;
+}
+
+.footer-links {
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 30px;
+  height: auto;
+  justify-content: center;
+  padding: 0;
+  width: auto;
+}
+
+.footer-links a {
+  color: #1c1c1c;
+  flex: none;
+  font-family: "Kiwi Maru", serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: left;
+  width: auto;
+}
+
+.sns-link {
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 30px;
+  height: 33px;
+  justify-content: flex-end;
+  padding: 0;
+  width: 38px;
+}
+
+.sns-link img {
+  display: block;
+  flex: none;
+  height: 29px;
+  object-fit: cover;
+  object-position: center;
+  width: 28px;
+}
+
+@media (max-width: 840px) {
+  .footer-inner {
+    flex-wrap: wrap;
+    gap: 40px 0;
+  }
+
+  .copyright,
+  .footer-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 30px 0;
+    width: 304px;
+  }
+
+  .footer-links a {
+    flex: none;
+    font-size: 13px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .dog-stage {
+    align-items: flex-end;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    left: auto;
+    max-width: none;
+    padding: 0 10px;
+    right: calc(100% - 100vw);
+    width: 100vw;
+  }
+
+  .dog-card {
+    --x-offset: 0px;
+    bottom: auto;
+    flex: none;
+    left: auto;
+    min-height: 68px;
+    min-width: 62px;
+    position: relative;
+    right: auto;
+    top: auto;
+    width: clamp(62px, 19vw, 84px);
+  }
+
+  .dog-card:hover,
+  .dog-card:focus {
+    --y-offset: -6px;
+  }
+
+  .hero-one .dog-a,
+  .hero-one .dog-b,
+  .hero-one .dog-c,
+  .hero-one .dog-d {
+    bottom: auto;
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+
+  .speech {
+    left: -26%;
+    top: -2%;
+    width: 82%;
+  }
+
+  .footer {
+    margin: 0;
+    padding: 16px 0 2px;
+  }
+
+  .footer-inner {
+    gap: 16px 0;
+    padding: 0;
+  }
+
+  .copyright {
+    font-size: 13px;
+    gap: 4px;
+  }
+
+  .footer-right {
+    gap: 10px;
+    padding: 0 16px 0 0;
+  }
+
+  .footer-links {
+    gap: 14px 0;
+    padding: 0;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .sns-link {
+    gap: 14px;
+  }
+}
